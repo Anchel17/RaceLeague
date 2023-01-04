@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Race League</title>
+</head>
+<body>
+    <div class="logo">
+        <img src="./img/checkered flag.png" alt="checkered flag">
+        <h1>Race league</h1>
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <h2>Race League Teams</h2>
+            <button onclick="openModalTeam()" id="cria-equipe">Add Team</button>
+        </div>
+
+        <div class="tabela">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Home</th>
+                        <th>Budget</th>
+                        <th class="acao">Editar</th>
+                        <th class="acao">Excluir</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+
+        <div class="container-modal">
+            <div class="modal-Equipe">
+                <form>
+                    <label for="modal-team-name">Name</label>
+                    <input id="modal-team-name" type="text" required/>
+    
+                    <label for="modal-team-home">Home</label>
+                    <input id="modal-team-home" type="text" required/>
+    
+                    <label for="modal-team-budget">Budget</label>
+                    <input id="modal-team-budget" type="number" required/>
+    
+                    <button id="salvar">Save</button>
+                </form>
+            </div>
+
+            <!--Aqui talvez colocamos o modal para criar os pilotos da equipe-->
+        </div>
+
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
