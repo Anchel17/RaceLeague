@@ -1,7 +1,8 @@
 const modalEquipe = document.querySelector(".container-modal");
 const tbody = document.querySelector("tbody");
 const teamName = document.querySelector("#modal-team-name");
-const teamHome = document.querySelector("#modal-team-home");
+const teamCity = document.querySelector("#modal-team-city");
+const teamCountry = document.querySelector("#modal-team-country");
 const teamBudget = document.querySelector("#modal-team-budget");
 const saveTeamBtn = document.querySelector("#salvar");
 
@@ -35,7 +36,8 @@ function openModal(){
     }
 
     teamName.value = '';
-    teamHome.value = '';
+    teamCity.value = '';
+    teamCountry.value = '';
     teamBudget.value = '';
 }
 
@@ -44,7 +46,7 @@ function insertTeam(team, index){
 
     tr.innerHTML = `
         <td>${team.name}</td>
-        <td>${team.home}</td>
+        <td>${team.city}, ${team.country}</td>
         <td>${team.budget}</td>
         <td class="acao">
             <button onclick="editTeam(${index})"><i class='bx bx-edit'></i></button>
@@ -67,20 +69,21 @@ function editTeam(index){
     }
 
     teamName.value = teams[index].name;
-    teamHome.value = teams[index].home;
+    teamCity.value = teams[index].city;
+    teamCountry.value = teams[index].country;
     teamBudget.value = teams[index].budget;
     id = index;
 }
 
 function excludeTeam(index){
     teams.splice(index, 1);
-    
+
     setEquipesBD();
     loadTeams();
 }
 
 saveTeamBtn.onclick = e => {
-    if(teamName == '' || teamHome == '' || teamBudget == ''){
+    if(teamName == '' || teamCity == '' || teamCountry == '' || teamBudget == ''){
         return;
     }
 
@@ -88,11 +91,12 @@ saveTeamBtn.onclick = e => {
 
     if(id != undefined){
         teams[id].name = teamName.value;
-        teams[id].home = teamHome.value;
+        teams[id].city = teamCity.value;
+        teams[id].country = teamCountry.value;
         teams[id].budget = teamBudget.value;
     }
     else{
-        teams.push({'name': teamName.value, 'home': teamHome.value, 'budget': teamBudget.value});
+        teams.push({'name': teamName.value, 'city': teamCity.value, 'country': teamCountry.value, 'budget': teamBudget.value});
     }
 
     setEquipesBD();
