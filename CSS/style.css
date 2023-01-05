@@ -183,7 +183,7 @@ tbody tr td.acao{
     }
   
     .modal-equipe{
-      width: 90%!important;
+      width: 70%!important;
     }
   
     .modal label{
@@ -223,7 +223,7 @@ tbody tr td.acao{
     padding: 40px;
     background-color: #fff;
     border-radius: 10px;
-    width: 50%;
+    width: 40%;
 }
 
 .modal-equipe label{
