@@ -41,6 +41,8 @@ function openModal(){
     teamBudget.value = '';
 }
 
+
+
 function insertTeam(team, index){
     let tr = document.createElement('tr');
 
@@ -83,7 +85,7 @@ function excludeTeam(index){
 }
 
 saveTeamBtn.onclick = e => {
-    if(teamName == '' || teamCity == '' || teamCountry == '' || teamBudget == ''){
+    if(teamName.value == '' || teamCity.value == '' || teamCountry.value == '' || teamBudget.value == ''){
         return;
     }
 
@@ -106,3 +108,11 @@ saveTeamBtn.onclick = e => {
     loadTeams();
     id = undefined;
 }
+
+jQuery(function() {
+    jQuery("#modal-team-budget").maskMoney({
+	prefix:'USD ', 
+	thousands:'.', 
+	decimal:','
+    })
+});

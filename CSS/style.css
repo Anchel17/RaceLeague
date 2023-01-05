@@ -267,19 +267,8 @@ tbody tr td.acao{
 }
 
 .modal-equipe .based #team-city, #team-country{
-    display: flex;
-    flex-direction: column;
-    max-width: 50%;
-}
-
-.modal-equipe .based #team-city{
     width: 40%;
 }
-
-.modal-equipe .based #team-country{
-    width: 40%;
-}
-
 
 .active{
     display: flex;
