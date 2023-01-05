@@ -213,7 +213,7 @@ tbody tr td.acao{
     z-index: 999;
     align-items: center;
     justify-content: center;
-    display: none
+    display: none;
 }
 
 .modal-equipe{
