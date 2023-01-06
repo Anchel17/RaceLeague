@@ -41,21 +41,21 @@
             <div class="modal-equipe">
                 <form>
                     <label for="modal-team-name">Name</label>
-                    <input id="modal-team-name" type="text" required/>
+                    <input id="modal-team-name" type="text" maxlength="38" required/>
                     
                     <div class="based">
                         <div id="team-city">
                             <label for="modal-team-city">City</label>
-                            <input id="modal-team-city" type="text" required/>
+                            <input id="modal-team-city" type="text" maxlength="58" required/>
                         </div>
                         <div id="team-country">
                             <label for="modal-team-country">Country</label>
-                            <input id="modal-team-country" type="text" required/>
+                            <input id="modal-team-country" type="text" maxlength="58" required/>
                         </div>
                     </div>
                     
                     <label for="modal-team-budget">Budget</label>
-                    <input id="modal-team-budget" type="text" pattern="[0-9]*" inputmode="numeric" required/>
+                    <input id="modal-team-budget" type="text" pattern="[0-9]*" inputmode="numeric" maxlength="18" required/>
     
                     <button id="salvar">Save</button>
                 </form>
