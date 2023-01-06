@@ -49,7 +49,7 @@ function insertTeam(team, index){
     tr.innerHTML = `
         <td>${team.name}</td>
         <td>${team.city}, ${team.country}</td>
-        <td>${team.budget}</td>
+        <td>$${team.budget}</td>
         <td class="acao">
             <button onclick="editTeam(${index})"><i class='bx bx-edit'></i></button>
         </td>
@@ -116,6 +116,10 @@ saveTeamBtn.onclick = e => {
 
 jQuery(
     function(){
-        $('#modal-team-budget').mask("#.##0,00", {prefix: 'USD', reverse: true});
+        $('#modal-team-budget').mask("#.##0,00",
+        {
+            placeholder: 'USD',
+            reverse: true
+        });
     }
 );
