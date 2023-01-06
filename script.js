@@ -85,6 +85,11 @@ function excludeTeam(index){
 }
 
 saveTeamBtn.onclick = e => {
+    teamName.value = teamName.value.trim();
+    teamCity.value = teamCity.value.trim();
+    teamCountry.value = teamCountry.value.trim();
+    teamBudget.value = teamBudget.value.trim();
+
     if(teamName.value == '' || teamCity.value == '' || teamCountry.value == '' || teamBudget.value == ''){
         return;
     }
