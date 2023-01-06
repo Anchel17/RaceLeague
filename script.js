@@ -114,10 +114,27 @@ saveTeamBtn.onclick = e => {
     id = undefined;
 }
 
-jQuery(function() {
+jQuery(
+    function() {
     jQuery("#modal-team-budget").maskMoney({
 	prefix:'USD ', 
 	thousands:'.', 
-	decimal:','
-    })
-});
+	decimal:',',
+    reverse: true
+    })},
+    function(){
+        $input.on('keyup', function (e) {
+            e = e || window.event;
+            var key = e.which || e.charCode || e.keyCode,
+            keyPressedChar,
+            selection,
+            startPos,
+            endPos,
+            value;
+            selection = getInputSelection();
+            startPos = selection.start;
+            maskAndPosition(startPos + 1);
+            });
+    }
+);
+
